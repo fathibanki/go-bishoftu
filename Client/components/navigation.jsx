@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { GoLogo } from './go-logo'
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { GoLogo } from "./go-logo";
 
 export function Navigation() {
-  const pathname = usePathname()
-  const [open, setOpen] = useState(false)
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   const isActive = (path) => {
-    return pathname === path
-  }
+    return pathname === path;
+  };
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
@@ -28,9 +28,9 @@ export function Navigation() {
             <Link
               href="/"
               className={`text-sm font-medium transition-colors ${
-                isActive('/')
-                  ? 'text-primary font-semibold'
-                  : 'text-foreground/70 hover:text-foreground'
+                isActive("/")
+                  ? "text-primary font-semibold"
+                  : "text-foreground/70 hover:text-foreground"
               }`}
             >
               Home
@@ -38,9 +38,9 @@ export function Navigation() {
             <Link
               href="/accommodations"
               className={`text-sm font-medium transition-colors ${
-                isActive('/accommodations')
-                  ? 'text-primary font-semibold'
-                  : 'text-foreground/70 hover:text-foreground'
+                isActive("/accommodations")
+                  ? "text-primary font-semibold"
+                  : "text-foreground/70 hover:text-foreground"
               }`}
             >
               Accommodations
@@ -48,9 +48,9 @@ export function Navigation() {
             <Link
               href="/explore"
               className={`text-sm font-medium transition-colors ${
-                isActive('/explore')
-                  ? 'text-primary font-semibold'
-                  : 'text-foreground/70 hover:text-foreground'
+                isActive("/explore")
+                  ? "text-primary font-semibold"
+                  : "text-foreground/70 hover:text-foreground"
               }`}
             >
               Explore
@@ -101,7 +101,9 @@ export function Navigation() {
               <Link
                 href="/"
                 className={`text-sm font-medium py-2 ${
-                  isActive('/') ? 'text-primary font-semibold' : 'text-foreground/80'
+                  isActive("/")
+                    ? "text-primary font-semibold"
+                    : "text-foreground/80"
                 }`}
                 onClick={() => setOpen(false)}
               >
@@ -110,7 +112,9 @@ export function Navigation() {
               <Link
                 href="/accommodations"
                 className={`text-sm font-medium py-2 ${
-                  isActive('/accommodations') ? 'text-primary font-semibold' : 'text-foreground/80'
+                  isActive("/accommodations")
+                    ? "text-primary font-semibold"
+                    : "text-foreground/80"
                 }`}
                 onClick={() => setOpen(false)}
               >
@@ -119,7 +123,9 @@ export function Navigation() {
               <Link
                 href="/explore"
                 className={`text-sm font-medium py-2 ${
-                  isActive('/explore') ? 'text-primary font-semibold' : 'text-foreground/80'
+                  isActive("/explore")
+                    ? "text-primary font-semibold"
+                    : "text-foreground/80"
                 }`}
                 onClick={() => setOpen(false)}
               >
@@ -130,5 +136,5 @@ export function Navigation() {
         </div>
       )}
     </nav>
-  )
+  );
 }
