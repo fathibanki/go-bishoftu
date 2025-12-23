@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState, useMemo } from "react"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
+import { useState, useMemo } from "react";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 const accommodations = [
   {
@@ -12,7 +12,8 @@ const accommodations = [
     rating: 4.8,
     pricePerNight: 250,
     image: "/luxury-5-star-resort.jpg",
-    description: "Premium resort with world-class amenities and stunning views of the Rift Valley.",
+    description:
+      "Premium resort with world-class amenities and stunning views of the Rift Valley.",
     amenities: ["Pool", "Spa", "WiFi", "Restaurant", "Gym"],
     bookingUrl: "https://www.booking.com",
   },
@@ -23,7 +24,8 @@ const accommodations = [
     rating: 4.6,
     pricePerNight: 180,
     image: "/adventure-lodge-nature.jpg",
-    description: "Eco-friendly lodge perfect for explorers seeking authentic experiences.",
+    description:
+      "Eco-friendly lodge perfect for explorers seeking authentic experiences.",
     amenities: ["WiFi", "Restaurant", "Tour Desk", "Garden", "Parking"],
     bookingUrl: "https://www.booking.com",
   },
@@ -78,7 +80,8 @@ const accommodations = [
     rating: 4.6,
     pricePerNight: 170,
     image: "/heritage-hotel-traditional.jpg",
-    description: "Hotel blending modern comfort with traditional Ethiopian style.",
+    description:
+      "Hotel blending modern comfort with traditional Ethiopian style.",
     amenities: ["Restaurant", "WiFi", "Parking", "Business Center"],
     bookingUrl: "https://www.booking.com",
   },
@@ -89,27 +92,162 @@ const accommodations = [
     rating: 4.5,
     pricePerNight: 140,
     image: "/placeholder.svg?height=250&width=350",
-    description: "Cozy lodge with breathtaking mountain views and hiking access.",
+    description:
+      "Cozy lodge with breathtaking mountain views and hiking access.",
     amenities: ["Restaurant", "Tour Desk", "Parking", "WiFi"],
     bookingUrl: "https://www.booking.com",
   },
-]
+  {
+    id: 9,
+    name: "Pyramid Hotels and ResortsWell-reviewed resort-style hotel.",
+    type: "Lodge",
+    rating: 4.5,
+    pricePerNight: 140,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Cozy lodge with breathtaking mountain views and hiking access.",
+    amenities: ["Restaurant", "Tour Desk", "Parking", "WiFi"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 10,
+    name: "Kuriftu Resort & Spa Bishoftu",
+    type: "Resort",
+    rating: 4.8,
+    pricePerNight: 220,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Famous lakeside resort offering luxury rooms, spa services, and a relaxing getaway atmosphere.",
+    amenities: ["Spa", "Restaurant", "Lake View", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 11,
+    name: "Pyramid Hotels and Resorts",
+    type: "Resort",
+    rating: 4.5,
+    pricePerNight: 140,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Well-reviewed resort-style hotel offering comfort and modern facilities.",
+    amenities: ["Restaurant", "Pool", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 12,
+    name: "Liesak Resort",
+    type: "Resort",
+    rating: 4.4,
+    pricePerNight: 130,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Peaceful resort located near Lake Babogaya, ideal for relaxation and scenic views.",
+    amenities: ["Lake View", "Restaurant", "Parking", "WiFi"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 13,
+    name: "Lake Bishoftu Resort",
+    type: "Resort",
+    rating: 4.3,
+    pricePerNight: 120,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Scenic lakeside resort perfect for nature lovers and quiet retreats.",
+    amenities: ["Lake View", "Restaurant", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 14,
+    name: "NOORA Resort",
+    type: "Resort",
+    rating: 4.6,
+    pricePerNight: 150,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Highly rated resort offering comfortable stays and quality hospitality services.",
+    amenities: ["Restaurant", "Garden", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 15,
+    name: "IVY Hotel Bishoftu",
+    type: "Hotel",
+    rating: 4.2,
+    pricePerNight: 85,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Mid-range hotel located in town with easy access to local dining and shopping.",
+    amenities: ["Restaurant", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 16,
+    name: "Yatu International Hotel",
+    type: "Hotel",
+    rating: 4.1,
+    pricePerNight: 90,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Well-rated town hotel offering comfortable rooms and convenient city access.",
+    amenities: ["Restaurant", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 17,
+    name: "Salayish Lodge and Park",
+    type: "Lodge",
+    rating: 4.4,
+    pricePerNight: 110,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Charming lodge by the lake with natural surroundings and peaceful ambiance.",
+    amenities: ["Lake View", "Garden", "Restaurant", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 18,
+    name: "The Viewpoint Lodge Resort",
+    type: "Lodge",
+    rating: 4.3,
+    pricePerNight: 115,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Lodge offering beautiful lake views and a quiet retreat experience.",
+    amenities: ["Lake View", "Restaurant", "WiFi", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+  {
+    id: 19,
+    name: "Babugaya Hotel",
+    type: "Hotel",
+    rating: 4.0,
+    pricePerNight: 75,
+    image: "/placeholder.svg?height=250&width=350",
+    description:
+      "Local lakeside hotel providing simple comfort and scenic surroundings.",
+    amenities: ["Lake View", "Restaurant", "Parking"],
+    bookingUrl: "https://www.booking.com",
+  },
+];
 
 export default function AccommodationsPage() {
-  const [selectedType, setSelectedType] = useState("All")
-  const [priceRange, setPriceRange] = useState([0, 300])
-  const [minRating, setMinRating] = useState(0)
+  const [selectedType, setSelectedType] = useState("All");
+  const [priceRange, setPriceRange] = useState([0, 300]);
+  const [minRating, setMinRating] = useState(0);
 
-  const types = ["All", "Hotel", "Guest House", "Resort", "Lodge"]
+  const types = ["All", "Hotel", "Guest House", "Resort", "Lodge"];
 
   const filteredAccommodations = useMemo(() => {
     return accommodations.filter((acc) => {
-      const typeMatch = selectedType === "All" || acc.type === selectedType
-      const priceMatch = acc.pricePerNight >= priceRange[0] && acc.pricePerNight <= priceRange[1]
-      const ratingMatch = acc.rating >= minRating
-      return typeMatch && priceMatch && ratingMatch
-    })
-  }, [selectedType, priceRange, minRating])
+      const typeMatch = selectedType === "All" || acc.type === selectedType;
+      const priceMatch =
+        acc.pricePerNight >= priceRange[0] &&
+        acc.pricePerNight <= priceRange[1];
+      const ratingMatch = acc.rating >= minRating;
+      return typeMatch && priceMatch && ratingMatch;
+    });
+  }, [selectedType, priceRange, minRating]);
 
   return (
     <>
@@ -118,9 +256,12 @@ export default function AccommodationsPage() {
         {/* Header */}
         <section className="bg-gradient-to-br from-primary/10 to-accent/5 py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Accommodations</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Accommodations
+            </h1>
             <p className="text-lg text-foreground/70">
-              Find your perfect stay in Bishoftu with our curated selection of luxury and comfort options.
+              Find your perfect stay in Bishoftu with our curated selection of
+              luxury and comfort options.
             </p>
           </div>
         </section>
@@ -130,7 +271,9 @@ export default function AccommodationsPage() {
             {/* Filters Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-card rounded-xl p-6 shadow-md sticky top-24">
-                <h3 className="text-xl font-bold text-foreground mb-6">Filters</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">
+                  Filters
+                </h3>
 
                 {/* Type Filter */}
                 <div className="mb-8">
@@ -154,27 +297,43 @@ export default function AccommodationsPage() {
 
                 {/* Price Range Filter */}
                 <div className="mb-8">
-                  <h4 className="font-semibold text-foreground mb-3">Price per Night</h4>
+                  <h4 className="font-semibold text-foreground mb-3">
+                    Price per Night
+                  </h4>
                   <div className="space-y-3">
                     <div>
-                      <label className="text-sm text-foreground/70">Min: ${priceRange[0]}</label>
+                      <label className="text-sm text-foreground/70">
+                        Min: ${priceRange[0]}
+                      </label>
                       <input
                         type="range"
                         min="0"
                         max="300"
                         value={priceRange[0]}
-                        onChange={(e) => setPriceRange([Number.parseInt(e.target.value), priceRange[1]])}
+                        onChange={(e) =>
+                          setPriceRange([
+                            Number.parseInt(e.target.value),
+                            priceRange[1],
+                          ])
+                        }
                         className="w-full"
                       />
                     </div>
                     <div>
-                      <label className="text-sm text-foreground/70">Max: ${priceRange[1]}</label>
+                      <label className="text-sm text-foreground/70">
+                        Max: ${priceRange[1]}
+                      </label>
                       <input
                         type="range"
                         min="0"
                         max="300"
                         value={priceRange[1]}
-                        onChange={(e) => setPriceRange([priceRange[0], Number.parseInt(e.target.value)])}
+                        onChange={(e) =>
+                          setPriceRange([
+                            priceRange[0],
+                            Number.parseInt(e.target.value),
+                          ])
+                        }
                         className="w-full"
                       />
                     </div>
@@ -183,7 +342,9 @@ export default function AccommodationsPage() {
 
                 {/* Rating Filter */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-3">Minimum Rating</h4>
+                  <h4 className="font-semibold text-foreground mb-3">
+                    Minimum Rating
+                  </h4>
                   <div className="space-y-2">
                     {[0, 3.5, 4.0, 4.5].map((rating) => (
                       <button
@@ -206,7 +367,9 @@ export default function AccommodationsPage() {
             {/* Accommodations Grid */}
             <div className="lg:col-span-3">
               <div className="mb-6 flex justify-between items-center">
-                <p className="text-foreground/70">Showing {filteredAccommodations.length} accommodations</p>
+                <p className="text-foreground/70">
+                  Showing {filteredAccommodations.length} accommodations
+                </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -223,20 +386,31 @@ export default function AccommodationsPage() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-3">
                         <div>
-                          <div className="text-sm font-semibold text-accent mb-1">{accommodation.type}</div>
-                          <h3 className="text-lg font-bold text-foreground">{accommodation.name}</h3>
+                          <div className="text-sm font-semibold text-accent mb-1">
+                            {accommodation.type}
+                          </div>
+                          <h3 className="text-lg font-bold text-foreground">
+                            {accommodation.name}
+                          </h3>
                         </div>
                         <div className="flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded">
                           <span className="text-yellow-500">★</span>
-                          <span className="text-sm font-semibold text-foreground">{accommodation.rating}</span>
+                          <span className="text-sm font-semibold text-foreground">
+                            {accommodation.rating}
+                          </span>
                         </div>
                       </div>
 
-                      <p className="text-sm text-foreground/70 mb-4">{accommodation.description}</p>
+                      <p className="text-sm text-foreground/70 mb-4">
+                        {accommodation.description}
+                      </p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
                         {accommodation.amenities.map((amenity, idx) => (
-                          <span key={idx} className="text-xs bg-accent/15 text-accent px-2 py-1 rounded-full">
+                          <span
+                            key={idx}
+                            className="text-xs bg-accent/15 text-accent px-2 py-1 rounded-full"
+                          >
                             {amenity}
                           </span>
                         ))}
@@ -244,8 +418,12 @@ export default function AccommodationsPage() {
 
                       <div className="flex justify-between items-center">
                         <div>
-                          <span className="text-2xl font-bold text-primary">${accommodation.pricePerNight}</span>
-                          <span className="text-sm text-foreground/70">/night</span>
+                          <span className="text-2xl font-bold text-primary">
+                            ${accommodation.pricePerNight}
+                          </span>
+                          <span className="text-sm text-foreground/70">
+                            /night
+                          </span>
                         </div>
                         <a
                           href={accommodation.bookingUrl}
@@ -264,7 +442,8 @@ export default function AccommodationsPage() {
               {filteredAccommodations.length === 0 && (
                 <div className="text-center py-12">
                   <p className="text-lg text-foreground/70">
-                    No accommodations match your filters. Try adjusting your criteria.
+                    No accommodations match your filters. Try adjusting your
+                    criteria.
                   </p>
                 </div>
               )}
@@ -274,5 +453,5 @@ export default function AccommodationsPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

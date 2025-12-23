@@ -7,33 +7,39 @@ import { Footer } from "@/components/footer";
 const exploreItems = [
   {
     id: 1,
-    name: "Adadi Maryam Church",
-    category: "Cultural Site",
-    description: "Ancient rock-hewn church carved from volcanic stone.",
+    name: "Lake Hora",
+    category: "Natural Wonder",
+    description: "Famous volcanic crater lake in Bishoftu.",
     details:
-      "One of Ethiopia's most sacred pilgrimage sites, dating back centuries. The intricate carvings and historical significance make this a must-visit for cultural enthusiasts.",
-    image: "/adadi-maryam-rock-church-ethiopia.jpg",
-    location: "South Bishoftu",
+      "One of Bishoftu’s most popular lakes, surrounded by resorts and walking areas. Ideal for relaxation and sunset views.",
+    image: "/lake-hora-bishoftu.jpg",
+    location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lake+Hora+Bishoftu",
   },
   {
     id: 2,
-    name: "Blue Nile Falls",
+    name: "Lake Babogaya",
     category: "Natural Wonder",
-    description: "Spectacular 45-meter waterfall with misty surroundings.",
+    description: "Beautiful crater lake surrounded by resorts and lodges.",
     details:
-      'Also known as "Tis Issat" or "Smoking Water" by locals, this majestic waterfall is a natural marvel. The best viewing is during the rainy season from July to September.',
-    image: "/blue-nile-falls-waterfall-ethiopia.jpg",
-    location: "East of Bishoftu",
+      "Known for peaceful surroundings, birdlife, and lakeside resorts. A favorite weekend destination.",
+    image: "/lake-babogaya-bishoftu.jpg",
+    location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lake+Babogaya+Bishoftu",
   },
   {
     id: 3,
-    name: "Debre Zeleke Falls",
+    name: "Lake Bishoftu (Debre Zeit Lake)",
     category: "Natural Wonder",
-    description: "Serene waterfall surrounded by lush vegetation.",
+    description: "Historic crater lake near the town center.",
     details:
-      "A hidden gem perfect for adventurers seeking off-the-beaten-path experiences. Great for photography and swimming in the natural pools.",
-    image: "/DebreZelekeFalls.jpg",
-    location: "North Bishoftu",
+      "A culturally significant lake with scenic walking paths and viewpoints.",
+    image: "/lake-bishoftu.jpg",
+    location: "Central Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lake+Bishoftu+Debre+Zeit",
   },
   {
     id: 4,
@@ -41,63 +47,95 @@ const exploreItems = [
     category: "Natural Wonder",
     description: "Natural geothermal springs for relaxation and wellness.",
     details:
-      "Immerse yourself in the therapeutic hot springs rich in minerals. Perfect for wellness retreats and spa treatments in a natural setting.",
-    image: "/BishoftuHotSpringsSpa.jpg",
-    location: "Central Bishoftu",
+      "Mineral-rich hot springs popular for therapeutic bathing and spa treatments.",
+    image: "/bishoftu-hot-springs.jpg",
+    location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Bishoftu+Hot+Springs",
   },
   {
     id: 5,
-    name: "Mount Ziquala Hike",
+    name: "Lake Kuriftu",
     category: "Natural Wonder",
-    description: "Challenging mountain trek with panoramic Rift Valley views.",
+    description: "Scenic crater lake surrounded by luxury resorts.",
     details:
-      "A rewarding hike for adventure seekers with breathtaking views at the summit. Guides are recommended for safety and cultural insights.",
-    image: "/MountZiqualaHike.jpg",
-    location: "West of Bishoftu",
+      "A calm and beautiful lake especially around Kuriftu Resort, perfect for lakeside walks.",
+    image: "/lake-kuriftu-bishoftu.jpg",
+    location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lake+Kuriftu+Bishoftu",
   },
   {
     id: 6,
-    name: "Local Market Cultural Tour",
-    category: "Cultural Site",
-    description: "Authentic Ethiopian market experience with local goods.",
+    name: "Lake Chelekleka",
+    category: "Natural Wonder",
+    description: "Seasonal lake and bird sanctuary.",
     details:
-      "Explore traditional crafts, local products, and authentic Ethiopian culture. Interact with local artisans and learn about traditional practices.",
-    image: "/local-market-cultural-tour.jpg",
-    location: "Bishoftu Town Center",
+      "Famous for migratory birds such as flamingos. Best visited during the rainy season.",
+    image: "/lake-chelekleka-bishoftu.jpg",
+    location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Lake+Chelekleka+Bishoftu",
   },
   {
     id: 7,
-    name: "Bishoftu Tour Guides Association",
-    category: "Travel Agent",
-    description:
-      "Professional local guides for authentic Bishoftu experiences.",
+    name: "Bishoftu Crater Lakes Viewpoint",
+    category: "Natural Wonder",
+    description: "Panoramic views of Bishoftu’s volcanic crater lakes.",
     details:
-      "Experienced guides offering personalized tours including cultural immersion, adventure hikes, and historical site visits. Available in multiple languages.",
-    image: "/bishoftu-adventures.jpg",
-    contact: "guides@gobisoftu.local",
-    location: "Bishoftu",
+      "An elevated viewpoint offering breathtaking photography and sightseeing opportunities.",
+    image: "/bishoftu-crater-lakes-viewpoint.jpg",
+    location: "Bishoftu Highlands",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Bishoftu+Crater+Lakes+Viewpoint",
   },
   {
     id: 8,
-    name: "Ethiopia Adventure Travel Co.",
-    category: "Travel Agent",
-    description: "Specialized adventure tour operator for Bishoftu region.",
+    name: "Kuriftu Cultural Experience",
+    category: "Cultural Site",
+    description: "Traditional culture, art, and lakeside leisure.",
     details:
-      "Offering customized tour packages including mountain expeditions, cultural tours, and luxury experiences. Multi-day packages available.",
-    image: "/EthiopiaAdventureTravelCo.jpg",
-    contact: "info@ethiopiaadventure.com",
+      "Enjoy Ethiopian cultural performances, art displays, and fine dining around Kuriftu Resort.",
+    image: "/kuriftu-cultural.jpg",
     location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kuriftu+Resort+Bishoftu",
   },
   {
     id: 9,
-    name: "Heritage Experiences",
-    category: "Travel Agent",
-    description: "Cultural and historical guided tours throughout Bishoftu.",
+    name: "Bishoftu Local Market",
+    category: "Cultural Site",
+    description: "Authentic Ethiopian market experience.",
     details:
-      "Deep dives into Ethiopian heritage, ancient history, and local traditions. Expert historians and cultural consultants lead all tours.",
+      "Discover local foods, handmade goods, and daily life in Bishoftu’s vibrant markets.",
+    image: "/bishoftu-local-market.jpg",
+    location: "Bishoftu Town Center",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Bishoftu+Local+Market",
+  },
+  {
+    id: 10,
+    name: "Bishoftu Recreational Walking Park",
+    category: "Cultural Site",
+    description: "Public park for walking, jogging, and family time.",
+    details: "A popular local spot for evening walks and social gatherings.",
+    image: "/bishoftu-recreation-park.jpg",
+    location: "Bishoftu Town",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Bishoftu+Recreational+Park",
+  },
+  {
+    id: 11,
+    name: "Heritage Experiences Bishoftu",
+    category: "Travel Agent",
+    description: "Cultural and historical guided tours in Bishoftu.",
+    details:
+      "Focused on Bishoftu’s heritage, volcanic lakes, and local traditions.",
     image: "/heritage-hotel-traditional.jpg",
     contact: "heritage@gobisoftu.travel",
     location: "Bishoftu",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Heritage+Experiences+Bishoftu",
   },
 ];
 
@@ -194,6 +232,16 @@ export default function ExplorePage() {
                     <div className="text-xs text-foreground/60 mb-2">
                       📧 {item.contact}
                     </div>
+                  )}
+                  {item.mapUrl && (
+                    <a
+                      href={item.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 text-sm font-semibold text-primary hover:underline"
+                    >
+                      🗺️ Open in Google Maps
+                    </a>
                   )}
                 </div>
               </div>
